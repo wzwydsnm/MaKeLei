@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#78350f">
+  <title>DND角色卡管理器（离线版）</title>
+  <script>
+  (function(){
+    function fix(){
+      try{
+        var cw=document.documentElement.clientWidth;
+        var sw=window.screen.width;
+        if(sw>0 && Math.abs(cw-sw)>80){
+          var m=document.querySelector('meta[name=viewport]');
+          if(!m){m=document.createElement('meta');m.name='viewport';document.head.appendChild(m);}
+          m.setAttribute('content','width='+sw+',initial-scale=1,user-scalable=no');
+        }
+      }catch(e){}
+    }
+    if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',fix);}else{fix();}
+    window.addEventListener('resize',fix);
+  })();
+  </script>
+  <link rel="icon" href="./assets/favicon.svg">
+  <script type="module" crossorigin src="./assets/index-DbS-V_JL.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-oQUx_fRt.css">
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>
